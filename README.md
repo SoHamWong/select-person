@@ -9,9 +9,9 @@ Layer，推荐layer 3.x版本
 Layer, recommend layer 3. X version 
 ##使用方法 (usage)
 引用css和js    
-                                                                                                                                   
-` ``css
-    <link rel="stylesheet" type="text/css" href="css/popup.css">    
-    <link rel="stylesheet" type="text/css" href="layer/skin/layer.css">  
-`
-
+        
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+    <link rel="stylesheet" type="text/css" href="layer/skin/layer.css">
+    欢迎到访
+    很高兴见到您
+    祝您，早上好，中午好，下午好，晚安
