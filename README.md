@@ -8,7 +8,8 @@
 Layer，推荐layer 3.x版本  
 Layer, recommend layer 3. X version 
 ##使用方法 (usage)
-引用css和js  
+引用css和js    
+                                                                                                                                   
 ` ``css
     <link rel="stylesheet" type="text/css" href="css/popup.css">    
     <link rel="stylesheet" type="text/css" href="layer/skin/layer.css">  
