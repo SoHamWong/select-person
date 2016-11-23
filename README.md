@@ -10,8 +10,12 @@ Layer, recommend layer 3. X version
 ##使用方法 (usage)
 引用css和js    
         
-        <link rel="stylesheet" type="text/css" href="css/popup.css">      
-        <link rel="stylesheet" type="text/css" href="layer/skin/layer.css">  
-        欢迎到访
-        很高兴见到您
-        祝您，早上好，中午好，下午好，晚安
+    <link rel="stylesheet" type="text/css" href="css/popup.css">      
+    <link rel="stylesheet" type="text/css" href="layer/skin/layer.css">  
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>  
+    <script type="text/javascript" src="js/getWords.js"></script>  
+    <script type="text/javascript" src="js/selectPerson.js"></script>  
+    <script type="text/javascript" src="layer/layer.js"></script>  
+    欢迎到访
+    很高兴见到您
+    祝您，早上好，中午好，下午好，晚安
