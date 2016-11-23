@@ -55,12 +55,12 @@
 	$.fn.select_tpl=function(index){
 		var defaults={
 			'selectbox':'<div class="person_box"><ul class="person_save"></ul><input type="hidden" /><a class="del_person_btn"><img src="images/del.png"></a><a class="add_person_btn"><img src="images/add.png"></a></div>',
-			'single':'<div class="obj_box"><div class="obj_name">@obj</div></div>',
-			'double':'<div class="obj_box"><div class="obj_name"><label><input type="checkbox" class="obj_check"/>@obj</label></div></div>',
-			'user':'<div class="add_item_name show_user" data-obj="@objName" value="@userId">@userName</div>',
+			'addli'    :'<li class="add_item_name" data-letter="@addletter"><span class="fl">@addName</span><span class="fr cur-poin add_del_btn">&times;</span><input type="hidden" name="uesr[]" value="@addValue" /></li>',
+			'double'   :'<div class="obj_box"><div class="obj_name"><label><input type="checkbox" class="obj_check"/>@obj</label></div></div>',
+			'user'     :'<div class="add_item_name show_user" data-obj="@objName" value="@userId">@userName</div>',
 			'addletter':'<div class="add_item_s_title letter_title" data-letter="@word">@word</div>',
-			'addli':'<li class="add_item_name" data-letter="@addletter"><span class="fl">@addName</span><span class="fr cur-poin add_del_btn">&times;</span><input type="hidden" name="uesr[]" value="@addValue" /></li>',
-			'savelist':'<li class="ali"><span>@name</span><a class="aa" value="@value"></a></li>',
+			'savelist' :'<li class="ali"><span>@name</span><a class="aa" value="@value"></a></li>',
+			'single'   :'<div class="obj_box"><div class="obj_name">@obj</div></div>',
 		}
 		return defaults[index];
 	}
