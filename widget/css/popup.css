@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+
+a, abbr, acronym, address, big, cite, code,
+
+del, dfn, em, img, ins, kbd, q, s, samp,
+
+small, strike, strong, sub, sup, tt, var,
+
+b, u, i,center,dl, dt, dd, ol, ul, li,
+
+fieldset, form, label, input, legend,
+
+table, caption, tbody, tfoot, thead, tr, th, td,
+
+article, aside, canvas, details, embed, 
+
+figure, figcaption, footer, header, hgroup, 
+
+menu, nav, output, ruby, section, summary,
+
+time, mark, audio, video,textarea,select{
+
+    list-style:none;
+
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+
+    font-size: 100%;
+
+    font: inherit;
+
+    vertical-align: baseline;
+
+    font-family:"microsoft Yahei";
+
+}
+
+input,button{
+
+    font-family:"microsoft Yahei";
+
+    /*-webkit-appearance:none;*/
+
+}
+
+a,em,strong,b,i,h1,h2,h3,h4,h5,h6{
+
+    font-style: normal;
+
+    font-weight: normal;
+
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+
+footer, header, hgroup, menu, nav, section {
+
+    display: block;
+
+}
+
+table {
+
+    border-collapse: collapse;
+
+    border-spacing: 0;
+
+}
+
+a,input[type=button]{cursor:pointer;}
+
+a:link,a:visited{
+
+    color:#03a9f4;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+}
+
+a:hover,a:active{
+    /*color:#03a9f4;*/
+    color:#c81403;
+
+    text-decoration:underline;
+
+}
+
+a:hover{
+
+    text-decoration:none;
+
+}
+a.cur{
+    color:#03a9f4;
+}
+
+input:-moz-placeholder, 
+
+textarea:-moz-placeholder,
+
+input::-moz-placeholder, 
+
+textarea::-moz-placeholder,
+
+input:-ms-input-placeholder, 
+
+textarea:-ms-input-placeholder,
+
+input::-webkit-input-placeholder,
+
+textarea::-webkit-input-placeholder{
+
+    color:#d0d0d0;
+
+}
+input,
+select,
+textarea,
+button{
+    outline: none;
+}
+button{
+    cursor: pointer;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearboth{
+    clear: both;
+}
+.cur-poin{
+    cursor: pointer;
+}
+/* 弹窗 */ 
+.input-text:hover, .textarea:hover{
+    border: none;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+#add_item_box{ 
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 690px;
+    height: 456px;
+    background: #fff;
+    border: 1px solid rgb(204,204,204);
+    z-index: 1000;
+}
+#add_item_title{
+    background: rgb(72,162,243);
+    color: white;
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px 0 10px;
+}
+#add_item_sbox{
+    overflow: hidden;
+    padding: 10px;
+}
+#add_item_search{
+    width: 272px;
+    position: relative;
+}
+#add_item_show{
+    width: 383px;
+}
+#add_item_search_btn{
+    background: white;
+    border: 1px solid rgb(188,188,188);
+    height: 26px;
+    width: 44px;
+  color: black;
+  margin:0;
+  display:inline-block;
+  line-height: 25px;
+  vertical-align: middle;
+}
+.add_item_search_input{
+    height: 26px;
+    width: 272px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(171,173,179);
+  vertical-align: middle;
+    border-radius: 0;
+    font-size: 14px;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.add_item_s_title,
+.obj_name{
+    background: rgb(239,239,239);
+    padding-left: 15px;
+}
+.obj_name{
+    padding-left: 0px;
+}
+.obj_name .btnAll{
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+#add_item_show .add_item_s_title{
+    border: 1px solid rgb(204,204,204);
+    height: 29px;
+    line-height: 29px;
+    font-size: 14px;
+    display: block !important;
+}
+#add_item_search .add_item_s_title,
+#add_item_search .obj_name{
+    border-bottom: 1px solid rgb(204,204,204);
+    border-top: 1px solid rgb(204,204,204);
+    height: 24px;
+    line-height: 24px;
+}
+#add_item_search .add_item_s_title:first-child{
+    border-top: none;
+}
+
+.add_item_name{
+    border-bottom: 1px solid rgb(242,242,242);
+    padding-left: 15px;
+}
+#add_item_search .add_item_name{
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+#add_item_show .add_item_name{
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    padding-right: 40px;
+}
+#add_item_search_box{
+    border: 1px solid rgb(201,201,201);
+    margin-top: 5px;
+  height: 321px;
+    overflow-y: auto;
+}
+.add_item_show_ul{
+    border: 1px solid rgb(130,135,144);
+    overflow-y: scroll;
+  height: 323px;
+}
+#add_item_btn_box{
+    background: rgb(247,247,247);
+    height: 38px;
+    text-align: right;
+    padding-right: 35px;
+}
+#add_item_btn_box button{
+    height: 26px;
+    line-height: 23px;
+    width: 55px;
+    border-radius: 4px;
+    font-size: 14px;
+  margin:0;
+  margin-top: 7px;
+  display: inline-block;
+}
+#add_item_btn_box .add_item_yes_btn{
+    background: rgb(72,163,243);
+    color: white;
+    border: 1px solid rgb(204,204,204);
+    margin-right: 20px;
+}
+.add_item_cancel_btn{
+    background: white;
+    border: 1px solid rgb(153,153,153);
+} 
+
+.file_del_btn{
+    color: rgb(158, 158, 158);
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -1px;
+}
+#add_item_search_ul{
+    position: absolute;
+    background: white;
+    border: 1px solid rgb(204,204,204);
+    z-index: 10;
+    max-height: 442px;
+    overflow-y: scroll;
+    width: 228px;
+    min-height: 100px;
+}
+.add_placeholder {
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(171, 171, 171, 0.3);
+    text-align: center;
+    line-height: 290px;
+}
+.person_box{
+    min-height: 33px;
+    height: auto;
+    line-height: 33px;
+    vertical-align: middle;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 7px;
+}
+.del_person_btn,
+.add_person_btn{
+    float: right;
+    margin-right: 5px;
+}
+.person_save{
+  min-height: 33px;
+  width: 81%;
+  display: inline-block;
+  vertical-align: top;
+}
+.person_save li{
+  float: left;
+  position: relative;
+  margin-left: 4px;
+  padding-right: 13px;
+  line-height: 33px;
+}
+.aa {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icon_del2.png') center center no-repeat;
+}
+.add_del_btn{
+  cursor: pointer;
+}
+/* 班次管理 */
+.shift-main .title{
+    width: 16%;
+    margin-right: 2%;
+} 
+.three-topic-box{
+    width: 81%;
+    display: inline-block;
+    vertical-align: top;
+}
+.three-topic-box .go-work-big:last-child{
+    margin-bottom: 0;
+}
+.shift-main .three-topic{
+    width: 24%;
+    display: inline-block;
+    line-height: 33px;
+    text-align: center;
+    margin-right: 5%;
+    cursor: pointer;
+}
+.shift-main .three-topic-cur{
+    border: 1px solid rgb(0, 153, 204);
+    color: rgb(0, 153, 204);
+}
+.three-topic-box .topic{
+    line-height: 31px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+}
+.work-item{
+    margin-bottom: 40px;
+    display: none;
+}
+.rest-item{
+    display: none;
+}
+.go-work-big{
+    margin-bottom: 18px;
+}
+.go-work-box,
+.rest-work-box,
+.clock-effective-box{
+    display: inline-block;
+}
+.go-work-box,
+.rest-work-box{
+    width: 20%;
+    margin-right: 4%;
+    vertical-align: top;
+}
+.go-work{
+    width: 72%;
+    position: relative;
+}
+.clock-effective-box{
+    width: 70%;
+}
+.clock-effective{
+    width: 33.4%;
+    vertical-align: top;
+}
+.go-work input{
+    width: 90%;
+}
+.clock-effective input,
+.go-work input{
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    background-color: transparent;
+}
+.clock-effective-notice,
+.dont-clock{
+    color: #999999;
+    font-size: 13px;
+}
+.hr-item{
+    height: 1px;
+    width: 88%;
+    background: rgb(204, 204, 204);
+    margin: 0 auto 29px;
+}
+.late-input{
+    width: 15.4%;
+}
+.shift-main .count{
+    left: 95%;
+}
+.shift-name-input{
+    padding-left: 5px;
+    font-size: 14px;
+}
+.next-day{
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    color: red;
+    display: none;
+}
+.clock-effective-content{
+    position: relative;
+    width: 47%;
+    display: inline-block;
+    float: left;
+}
+@media screen and (max-width: 1300px) {
+    .three-topic-box{
+        width: 80%;
+    }
+    .go-work-box,
+    .rest-work-box{
+        width: 24%;
+    }
+    .go-work{
+        width: 67%;
+    }
+    .clock-effective-box{
+        width: 68%;
+    }
+    .clock-effective{
+        width: 53.4%;
+    }
+    .clock-effective-notice{
+        display: block;
+        margin-left: 126px;
+    }
+}
