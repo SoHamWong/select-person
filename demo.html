@@ -16,14 +16,18 @@
 	<script type="text/javascript" src="layer/layer.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			/*
-		 	* container保存弹窗的盒子 默认body
-		 	* type选择类型，1为多选，0为单选
-		 	* link数据源
-		 	*/
+		 	/*
+			* container包裹弹窗的容器(默认body)
+			* type选择类型:1为多选,0为单选(默认1)
+			* link数据源
+			* yesfn选择完毕回调
+			*/
 			$.fn.select_run({
 				"selectbox":".main",
 				"link":"select.json",
+				"ysefn":function(){
+					layer.msg('选择完毕', {icon: 1});
+				}
 			});
 		})
 	</script>

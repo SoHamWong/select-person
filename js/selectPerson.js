@@ -1,28 +1,28 @@
 ;(function(){
-    var _USERALL=null;//保存初始数据
-    var _SELECTBOX=null;
-    var _SAVEBIGBOX=null;
-    var _SAVEBOX=null;
-    var _RIGHTUL=null;
-    var _CHECKALL=null;
-    var _YESFN=null;
-    var _LETTER=null;//首字母
-	var _TYPE=null;  //获取单选多选
-	var _INDEX=null; //获取对应的索引值
-    var _ALLOBJ=null;//所有成员
-    var _OBJBOX=null;//项目盒子
-    var _PLACEHOLDER=null;//水印
-    var _POPUP=null;
+	var _CON        = null, //弹窗外层class
+    	_SELECTBOX  = null, //选择框外层class
+    	_SAVEBIGBOX = null, //选择框
+    	_SAVEBOX    = null, //已有成员列表框
+    	_RIGHTUL    = null, //新添加成员列表框
+    	_CHECKALL   = null, //项目全选按钮
+    	_LINK       = null, //数据源
+    	_USERALL    = null, //所有数据
+    	_LETTER     = null, //首字母
+    	_TYPE       = null, //选择类型
+    	_INDEX      = null, //对应的选择框序号
+    	_ALLOBJ     = null, //所有成员
+    	_OBJBOX     = null, //项目
+    	_PLACEHOLDER= null, //水印
+    	_POPUP      = null, //弹窗
+    	_YESFN      = null; //选择事件处理
 
 	$.fn.select_run=function(json){
-		// 获取容器
 		_LINK       = json.link;
 		_SELECTBOX  = json.selectbox;
 		if(json.container){ _CON = json.container }else{ _CON = 'body' };
 		if(json.type){ _TYPE = json.type }else{ _TYPE = 1 };
 		if($.fn.isType(json.ysefn,'function') && json.ysefn){ _YESFN = json.ysefn};
-
-		// 初始化
+		// 选择框初始化
 		$.fn.box_init();
 		// 绑定事件
 		$.fn.select_event();
@@ -40,15 +40,24 @@
 	}
 
 	$.fn.select_event=function(){
+		// 点击弹窗
 		$.fn.select_begin();
+		// 清空所有成员
 		$.fn.clear_all();
+		// 添加成员
 		$.fn.add_person();
+		// 删除新添加成员
 		$.fn.del_person();
-		$.fn.fuzzy_search();
-		$.fn.all_select();
-		$.fn.yes_fn();
-		$.fn.cancle_fn();
+		// 删除已有成员
 		$.fn.del_btn();
+		// 模糊搜索
+		$.fn.fuzzy_search();
+		// 全选
+		$.fn.all_select();
+		// 选择完毕回调
+		$.fn.yes_fn();
+		// 取消选择
+		$.fn.cancle_fn();
 	}
 
 	// 模板
@@ -184,20 +193,17 @@
 				}
 				_ALLOBJ=$('.show_user');
 	   			_OBJBOX=$('.obj_box');
-
+	   			// 添加首字母
 	   			$.fn.add_letter();
 	   			_LETTER   = $('.add_item_s_title');
-
+	   			// 隐藏已存在成员
 	   			$.fn.hide_already();
-
 	   			_CHECKALL = $('.obj_check');
 				_SAVEBOX  = $('.person_save');
 	   			_USERALL  = $('#add_item_search_box').html();
 			}
 		});
-
 		$(_CON).append(selectBox);
-		
 	    _PLACEHOLDER = $('.add_placeholder');
 	    _RIGHTUL     = $('.add_item_show_ul');
 	    _lEFTBOX     = $('#add_item_search_box');
@@ -293,7 +299,7 @@
 	    })
 	}
 
-	// 添加
+	// 添加成员
 	$.fn.switch_add=function(add_letter,add_name,add_value,self){
 		var tpl=$.fn.select_tpl('addli');
 		tpl = $.fn.str_replace('@addLetter',add_letter,tpl);
@@ -313,7 +319,6 @@
 	        var del_letter = $(this).parent().attr("data-letter");
 	        $(this).parent().remove();
 	        $('.add_item_name[value='+ del_val +']').show();
-
 	        $.fn.count_num();
 	        $.fn.hide_letter();
 	        _CHECKALL.removeAttr('checked');
@@ -357,7 +362,7 @@
 		})
 	}
 
-	// 全选事件
+	// 全选
 	$.fn.all_select=function(){
 		$(document).on('click','.obj_check',function(){
 			var add_user = $(this).parents('.obj_box').find('.show_user:visible');
@@ -372,7 +377,7 @@
 		})
 	}
 
-	// 确定的回调事件
+	// 选择完毕回调
 	$.fn.yes_fn=function(){
 		$(document).on('click','.add_item_yes_btn',function(){
 			var all_value = [];
@@ -401,18 +406,18 @@
             });
 	        _SAVEBIGBOX.eq(_INDEX).find('input[type=hidden]').val(all_value.join(','));
 	        _POPUP.remove();
-			if(_YESFN){_YESFN(_TYPE,_RIGHTUL.find('li'))};
+			if(_YESFN){_YESFN()};
 		})
 	}
 
-	// 取消事件
+	// 取消选择
 	$.fn.cancle_fn=function(){
 		$(document).on('click','.add_item_cancel_btn,.add_item_close_btn',function(){
 			_POPUP.remove();
 		})
 	}
 
-	// 清空事件
+	// 清空所有成员
 	$.fn.clear_all=function(){
 		$(document).on('click','.del_person_btn',function(){
 			layer.confirm('确定全部清空吗？', {
@@ -426,6 +431,7 @@
 		})
 	}
 
+	// 删除已有成员
 	$.fn.del_btn=function(){
 		$(document).on('click','.aa',function(){
 			var self = $(this);
@@ -443,6 +449,4 @@
 			});
 		})
 	}
-
-	
 })(jQuery);
