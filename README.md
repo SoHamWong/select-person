@@ -12,7 +12,6 @@ Layer, recommend layer 3. X version
         
     <link rel="stylesheet" type="text/css" href="css/popup.css">      
     <link rel="stylesheet" type="text/css" href="layer/skin/layer.css">  
--------------
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>  
     <script type="text/javascript" src="js/getWords.js"></script>  
     <script type="text/javascript" src="js/selectPerson.js"></script>  
