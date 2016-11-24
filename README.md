@@ -4,8 +4,11 @@
 ##最新版本 (The latest version)
 ###0.1.0(161123)
 [历史版本介绍](#readme)
-##依赖 (dependence)
-Layer，推荐layer 3.x版本  
+##依赖 (dependence)  
+jQuery 1.7以上版本，推荐jQuery 2.x版本  
+JQuery version 1.7 above, recommended the jQuery (2) x version  
+
+Layer，推荐layer 3.x版本    
 Layer, recommend layer 3. X version 
 ##使用方法 (usage)
 引用css和js    
