@@ -40,4 +40,6 @@ $.fn.select_run({
 | selectbox     | 包裹选择器的容器             | 空       | 选择器   |
 | type          | 选择类型（1为多选，0为单选）  | 1        | 1或0     |
 | link          | 数据源                     | 空        | json    |
-| yesfn         | 选择完毕回调函数             | 空       | 函数     |
+| yesfn         | 选择完毕回调函数             | 空       | 函数     |  
+##select-person使用交流群  
+[群号：528263095，点击加群](#readme)
