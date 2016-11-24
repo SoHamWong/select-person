@@ -1,7 +1,8 @@
 # select-person
 ##背景介绍 (introduce)
 这是第一个放上github的自写插件，我知道没什么人看的啦嘿嘿，要是发现什么bug，请邮箱联系我们，谢谢:blush:  
-[历史背景介绍](https://github.com/soHamWong/select-person/blob/master/Changelog.md)
+
+[历史背景介绍](https://github.com/soHamWong/select-person/blob/master/Intro.md)
 ##最新版本 (The latest version)
 ###0.1.0(161123)
 [所有更新日志](https://github.com/soHamWong/select-person/blob/master/Changelog.md)
