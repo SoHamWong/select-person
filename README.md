@@ -42,4 +42,4 @@ $.fn.select_run({
 | link          | 数据源                     | 空        | json    |
 | yesfn         | 选择完毕回调函数             | 空       | 函数     |  
 ##select-person使用交流群  
-[群号：528263095，点击加群](#readme)
+[群号：528263095，点击加群](http://shang.qq.com/wpa/qunwpa?idkey=0aaf7485d479d80a1d5877f140b28203288c5e2c50cfce2a365b4cbd7bad2c0d)
