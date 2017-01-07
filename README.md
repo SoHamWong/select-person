@@ -48,12 +48,18 @@ $.fn.select_run({
 });
 ```
 （注明：如需下载本地运行，请在本机装服务器环境，否则ajax会报错。）  
-##参数列表 (options)    
+##demo说明 (demo)  
+hasCreate-hasObj-demo.html  （弹窗需要创建，数据按项目排列）   
+hasCreate-notObj-demo.html  （弹窗需要创建，数据按单人排列）    
+
+popInHtml-hasObj-demo.html  （弹窗写页面内，数据按项目排列）   
+popInHtml-notObj-demo.html  （弹窗写页面内，数据按单人排列）   
+##参数列表 (options)    
 | 参数           | 说明                      | 默认值    | 可填值   |
 |:---------------|:-------------------------:|:--------:|:-------:|
-|hasCreate|弹窗是否要创建|false|true or false|  
+|hasCreate|弹窗是否要创建|false|boolean|  
 |popParent|弹窗外层class|空|选择器|  
-|hasObj|数据是否按项目排列|空|true or false| 
+|hasObj|数据是否按项目排列|空|boolean| 
 |data|数据|空|数组|
 |type|选择类型（1为多选，0为单选）|多选|1或0|   
 |yesCallback|回调|空|函数|   
