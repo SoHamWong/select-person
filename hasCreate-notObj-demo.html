@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选人弹窗</title>
+		<link rel="stylesheet" type="text/css" href="layer/skin/layer.css">
+		<link rel="stylesheet" type="text/css" href="css/selectPerson.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="person_box" type="1" hasObj="true">
+                <ul class="person_save"><div class="clearboth"></div></ul>
+                <input type="hidden" name="department_user_id" />
+                <a class="del_person_btn"></a>
+                <a class="add_person_btn"></a>
+            </div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/getWords.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/selectPerson.js"></script>
+	<script type="text/javascript" src="layer/layer.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.ajax({
+	            type:"GET",
+	            url:'js/selectSingle.json',
+	            success:function(data){
+	                $.fn.selectRun({
+	                    "hasCreate":true,
+	                    "hasObj":false,
+	                    "data":data
+	                })
+	            }
+	        })
+		})
+	</script>
+</html>
