@@ -3,9 +3,9 @@
     var type,           //单选 or 多选
         data,           //数据
         hasObj,         //是否有项目/部门
-        hasCreate,      //弹框是否要创建
         popParent,      //弹窗外层class
-        yesCallback;    //回调
+        yesCallback,    //回调
+        hasCreate = false;//弹框是否要创建
 
     // 其他全局
     var index,          //选择框下标
