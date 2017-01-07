@@ -4,32 +4,37 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>选人弹窗</title>
-		<link rel="stylesheet" type="text/css" href="css/popup.css">
 		<link rel="stylesheet" type="text/css" href="layer/skin/layer.css">
+		<link rel="stylesheet" type="text/css" href="css/selectPerson.css">
 	</head>
 	<body>
-		<div class="main"></div>
+		<div class="main">
+			<div class="person_box" type="1" hasObj="true">
+                <ul class="person_save"><div class="clearboth"></div></ul>
+                <input type="hidden" name="department_user_id" />
+                <a class="del_person_btn"></a>
+                <a class="add_person_btn"></a>
+            </div>
+		</div>
 	</body>
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="js/getWords.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
 	<script type="text/javascript" src="js/selectPerson.js"></script>
 	<script type="text/javascript" src="layer/layer.js"></script>
 	<script type="text/javascript">
 		$(function(){
-		 	/*
-			* container包裹弹窗的容器(默认body)
-			* selectbox包裹选择框的容器
-			* type选择类型:1为多选,0为单选(默认1)
-			* link数据源
-			* yesfn选择完毕回调
-			*/
-			$.fn.select_run({
-				"selectbox":".main",
-				"link":"select.json",
-				"ysefn":function(){
-					layer.msg('选择完毕', {icon: 1});
-				}
-			});
+			$.ajax({
+	            type:"GET",
+	            url:'js/selectMultiple.json',
+	            success:function(data){
+	                $.fn.selectRun({
+	                    "hasCreate":true,
+	                    "hasObj":true,
+	                    "data":data
+	                })
+	            }
+	        })
 		})
 	</script>
 </html>
