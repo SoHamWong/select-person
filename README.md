@@ -24,11 +24,23 @@ Layer, recommend layer 3. X version
 <script type="text/javascript" src="js/selectPerson.js"></script>  
 <script type="text/javascript" src="layer/layer.js"></script>
 ```
+以下为两种调用方式  
 
 ```
-$.fn.select_run({  
-    "selectbox":".main",  
-    "link":"select.json",  
+$.ajax({  
+    type:"GET",  
+    url:'js/selectMultiple.json',  
+    success:function(data){  
+        $.fn.selectRun({  
+            "hasCreate":true,  
+            "hasObj":true,  
+            "data":data  
+        })  
+    }  
+})  
+            
+$.fn.select_run({   
+    "hasCreate":false,
     "ysefn":function(){  
             layer.msg('选择完毕', {icon: 1});  
     }  
