@@ -49,7 +49,6 @@ $.fn.select_run({
 ```
 （注明：如需下载本地运行，请在本机装服务器环境，否则ajax会报错。）  
 ##参数列表 (options)    
-
 | 参数           | 说明                      | 默认值    | 可填值   |
 |:---------------|:-------------------------:|:--------:|:-------:|
 |hasCreate|弹窗是否要创建|false|true or false|  
@@ -58,5 +57,9 @@ $.fn.select_run({
 |data|数据|空|数组|
 |type|选择类型（1为多选，0为单选）|多选|1或0|   
 |yesCallback|回调|空|函数|   
-##select-person使用交流群  
+###注意：
+popParent 必须配合 hasCreate 且 hasCreate 为 true，才有作用   
+hasCreate 为true 时必须传 hasObj    
+hasCreate 为false 时 type和hasObj 需写在 $('.person_box')的attr上     
+##select-person使用交流群  
 [群号：528263095，点击加群](http://shang.qq.com/wpa/qunwpa?idkey=0aaf7485d479d80a1d5877f140b28203288c5e2c50cfce2a365b4cbd7bad2c0d)
