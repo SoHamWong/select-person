@@ -4,7 +4,7 @@
 
 [历史背景介绍](https://github.com/soHamWong/select-person/blob/master/Intro.md)
 ##最新版本 (The latest version)
-###0.1.0(161123)
+###1.0.4(170107)
 [所有更新日志](https://github.com/soHamWong/select-person/blob/master/Changelog.md)
 ##依赖 (dependence)  
 jQuery 1.7以上版本，推荐jQuery 2.x版本  
@@ -16,7 +16,7 @@ Layer, recommend layer 3. X version
 引用css和js    
 
 ```
-<link rel="stylesheet" type="text/css" href="css/popup.css">      
+<link rel="stylesheet" type="text/css" href="css/selectPerson.css">      
 <link rel="stylesheet" type="text/css" href="layer/skin/layer.css">  
 
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>  
